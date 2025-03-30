@@ -73,5 +73,4 @@ SELECT SUM(price) FROM books; -- Sum of prices
 SELECT AVG(price) FROM books; -- Average price
 ```
 
-  ```bash
-   git clone https://github.com/yourusername/projectname.git
+
