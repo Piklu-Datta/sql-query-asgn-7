@@ -50,6 +50,10 @@ ORDER BY price DESC
 LIMIT 1;
 
 --Number3:-
+SELECT customers.name, count(orders.quantity) AS total_orders
+ from customers
+ INNER JOIN orders on customers.id = orders.customer_id
+ GROUP BY customers.name
 
 
 --Number4:-
