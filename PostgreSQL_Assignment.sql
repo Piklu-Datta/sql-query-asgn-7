@@ -58,11 +58,12 @@ SELECT sum(orders.quantity*books.price) as total_revenue
  INNER JOIN orders on orders.book_id = books.id
 
 --Number5:-
- SELECT customers.name, count(orders.id) as total_orders
- from customers
- INNER JOIN orders on customers.id = orders.customer_id
- Group BY customers.name
- ORDER BY total_orders DESC
+SELECT customers.name, count(orders.id) as total_orders
+FROM customers
+INNER JOIN orders ON customers.id = orders.customer_id
+GROUP BY customers.name
+HAVING count(orders.id) > 1
+ORDER BY total_orders DESC;
 
  --Number6:-
  SELECT  Round(avg(price),2) as total_revenue 
